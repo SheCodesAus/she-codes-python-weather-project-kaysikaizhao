@@ -3,7 +3,7 @@ from datetime import datetime
 
 DEGREE_SYBMOL = u"\N{DEGREE SIGN}C"
 
-
+# qs: is this an example? of if this requires input?
 def format_temperature(temp):
     """Takes a temperature and returns it in string format with the degrees
         and celcius symbols.
@@ -24,7 +24,10 @@ def convert_date(iso_string):
     Returns:
         A date formatted like: Weekday Date Month Year e.g. Tuesday 06 July 2021
     """
-    pass
+    import datetime
+    datetime.datetime.strptime('2021-07-02T07:00:00+08:00:00', "%Y-%m-%dT%H:%M:%S+H:%M:%S")
+    return datetime.datetime
+    # datetime.datetime(2021, 7, 2, 7, 0, 0, 8, 0, 0)
 
 
 def convert_f_to_c(temp_in_farenheit):
